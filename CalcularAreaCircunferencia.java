@@ -20,6 +20,7 @@ public class CalcularAreaCircunferencia {
         String DoR =  scan.nextLine(); //Aqui se ingresa la letra que define si sera por diametro o Radio
         System.out.println("Ingrese el valor");
         float ValorDoR = scan.nextFloat(); // aqui se ingresa el valor DoR
+        scan.close();
         float Area = 0;
         if (DoR.equals("D")) {
             Area =  (ValorDoR /2) * (ValorDoR/2) * 3.1416f; //se utilizó "f" al final del valor de pi para definir los valores tipo float
