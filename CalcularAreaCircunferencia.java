@@ -22,11 +22,11 @@ public class CalcularAreaCircunferencia {
         float ValorDoR = scan.nextFloat(); // aqui se ingresa el valor DoR
         scan.close();
         float Area = 0;
-        if (DoR.equals("D")) {
+        if (DoR.equalsIgnoreCase("D"))   {
             Area =  (ValorDoR /2) * (ValorDoR/2) * 3.1416f; //se utilizó "f" al final del valor de pi para definir los valores tipo float
             //esta formula sirve para calcular si la medida es Diametro
         }
-        else if (DoR.equals("R")){
+        else if (DoR.equalsIgnoreCase("R"))  {
             Area = ValorDoR * ValorDoR * 3.1416f; // Esta formula sirve para calcular si el valor es Radio
         }
         else {
