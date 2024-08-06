@@ -1,5 +1,5 @@
 import java.util.Scanner; 
- 
+import java.lang.Math; 
 /** 
  * Esta clase llamada CalcularAreaCircunferencia tiene como objetivo calcular el area de una circunferencia ya sea por Diametro o por Radio
  * @since 2024-07-30
@@ -20,13 +20,14 @@ public class CalcularAreaCircunferencia {
         String DoR =  scan.nextLine(); //Aqui se ingresa la letra que define si sera por diametro o Radio
         System.out.println("Ingrese el valor");
         float ValorDoR = scan.nextFloat(); // aqui se ingresa el valor DoR
-        float Area = 0;
-        if (DoR.equals("D")) {
-            Area =  (ValorDoR /2) * (ValorDoR/2) * 3.1416f; //se utilizó "f" al final del valor de pi para definir los valores tipo float
+        scan.close();
+        double Area = 0;
+        if (DoR.equalsIgnoreCase("D")) {
+            Area =  (ValorDoR /2) * (ValorDoR/2) * Math.PI; //se utilizó "f" al final del valor de pi para definir los valores tipo float
             //esta formula sirve para calcular si la medida es Diametro
         }
-        else if (DoR.equals("R")){
-            Area = ValorDoR * ValorDoR * 3.1416f; // Esta formula sirve para calcular si el valor es Radio
+        else if (DoR.equalsIgnoreCase("R")){
+            Area = ValorDoR * ValorDoR * Math.PI; // Esta formula sirve para calcular si el valor es Radio
         }
         else {
             System.out.println("Tipo de medida no válido. Usa 'D' para diámetro o 'R' para radio.");
